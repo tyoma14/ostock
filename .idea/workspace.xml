@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="- Licensing Service &#10;- Config Server&#10;- Docker configs">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/java/com/optimagrowth/configserver/ConfigServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/test/java/com/optimagrowth/configserver/ConfigServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/LicensingServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/config/ServiceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/controller/LicenseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/model/License.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/repository/LicenseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/service/LicenseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/test/java/com/optimagrowth/license/LicensingServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2SnsTxe3x7Wwa4zsPpUXJ1EyM0h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/artyom/projects/manning-smia",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "a1273365e8d4a3a4f41281155ebc7ad2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ostock" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ostock" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="configserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.optimagrowth.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LicensingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="licensing-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.optimagrowth.license.LicensingServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="" />
+      <created>1689793693138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689793693138</updated>
+      <workItem from="1689793694207" duration="3122000" />
+      <workItem from="1689796897644" duration="45000" />
+      <workItem from="1689826746431" duration="342000" />
+      <workItem from="1689871860026" duration="10241000" />
+    </task>
+    <task id="LOCAL-00001" summary=".gitignore files added">
+      <created>1689883955206</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689883955206</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=".gitignore files added" />
+    <MESSAGE value="- Licensing Service &#10;- Config Server&#10;- Docker configs" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Licensing Service &#10;- Config Server&#10;- Docker configs" />
+  </component>
+</project>
