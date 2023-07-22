@@ -24,19 +24,32 @@ services:
     image: ostock/configserver:0.0.1-SNAPSHOT
     ports:
        - "8888:8888"
-    environment:
-      ENCRYPT_KEY: "fje83Ki8403Iod87dne7Yjsl3THueh48jfuO9j4U2hf64Lo"
     networks:
       backend:
         aliases:
           - "configserver"
+  eurekaserver:
+    image: ostock/eurekaserver:0.0.1-SNAPSHOT
+    environment:
+      CONFIGSERVER_URI: "http://configserver:8888"
+    ports:
+      - "8070:8070"
+    depends_on:
+      database:
+        condition: service_healthy
+      configserver:
+        condition: service_started
+    networks:
+      backend:
+        aliases:
+          - "eurekaserver"
   licensingservice:
-    image: ostock/licensing-service:0.0.2-SNAPSHOT
+    image: ostock/licensing-service:0.0.3-SNAPSHOT
     environment:
       PROFILE: "dev"
       CONFIGSERVER_URI: "http://configserver:8888"
       CONFIGSERVER_PORT:   "8888"
-      DATABASESERVER_PORT: "5433"
+      DATABASESERVER_PORT: "5432"
     depends_on:
       database:
         condition: service_healthy
@@ -44,6 +57,22 @@ services:
         condition: service_started
     ports:
       - "8080:8080"
+    networks:
+      - backend
+  organizationservice:
+    image: ostock/organization-service:0.0.1-SNAPSHOT
+    environment:
+      PROFILE: "dev"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: "8888"
+      DATABASESERVER_PORT: "5432"
+    depends_on:
+      database:
+        condition: service_healthy
+      configserver:
+        condition: service_started
+    ports:
+      - "8081:8081"
     networks:
       - backend
 
