@@ -4,43 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="- Licensing Service &#10;- Config Server&#10;- Docker configs">
-      <change afterPath="$PROJECT_DIR$/eurekaserver/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eurekaserver/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eurekaserver/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eurekaserver/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eurekaserver/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eurekaserver/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eurekaserver/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eurekaserver/src/main/java/com/optimagrowth/eurekaserver/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eurekaserver/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/OrganizationServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/controller/OrganizationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/model/Organization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/repository/OrganizationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/service/OrganizationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="- Organization Service added&#10;- Eureka Server added">
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/model/Organization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/service/client/OrganizationRestTemplateClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/src/test/java/com/optimagrowth/license/LicensingServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/LicensingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/LicensingServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/controller/LicenseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/controller/LicenseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/model/License.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/model/License.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/service/LicenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/service/LicenseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,7 +51,7 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "liberica-17",
-    "last_opened_file_path": "/home/artyom/projects/ostock",
+    "last_opened_file_path": "/home/artyom/projects/manning-smia",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,6 +68,9 @@
       <recent name="$PROJECT_DIR$/organization-service/src/main/java/org/optimagrowth/organization" />
       <recent name="$PROJECT_DIR$/eurekaserver" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.optimagrowth.license.model" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
@@ -152,7 +138,9 @@
       <workItem from="1689942391079" duration="6023000" />
       <workItem from="1690010779214" duration="4547000" />
       <workItem from="1690033886629" duration="12126000" />
-      <workItem from="1690054758673" duration="4968000" />
+      <workItem from="1690054758673" duration="5740000" />
+      <workItem from="1690220125102" duration="2636000" />
+      <workItem from="1690701581735" duration="4228000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files added">
       <created>1689883955206</created>
@@ -168,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689884448850</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Organization Service added&#10;- Eureka Server added">
+      <created>1690060698524</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690060698524</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +172,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=".gitignore files added" />
     <MESSAGE value="- Licensing Service &#10;- Config Server&#10;- Docker configs" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Licensing Service &#10;- Config Server&#10;- Docker configs" />
+    <MESSAGE value="- Organization Service added&#10;- Eureka Server added" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Organization Service added&#10;- Eureka Server added" />
   </component>
 </project>

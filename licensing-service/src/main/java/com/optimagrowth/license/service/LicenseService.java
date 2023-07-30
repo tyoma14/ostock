@@ -2,7 +2,9 @@ package com.optimagrowth.license.service;
 
 import com.optimagrowth.license.config.ServiceConfig;
 import com.optimagrowth.license.model.License;
+import com.optimagrowth.license.model.Organization;
 import com.optimagrowth.license.repository.LicenseRepository;
+import com.optimagrowth.license.service.client.OrganizationRestTemplateClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,13 +19,26 @@ public class LicenseService {
 
     private final LicenseRepository licenseRepository;
     private final ServiceConfig config;
+    private final OrganizationRestTemplateClient organizationRestClient;
 
-    public License getLicense(String organizationId, String licenseId){
+    public License getLicense(String organizationId, String licenseId, String clientType) {
         License license = licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
-        if (license == null) {
-            throw new IllegalArgumentException("License not found");
+        if (license == null) throw new IllegalArgumentException("License not found");
+        Organization organization = retrieveOrganizationInfo(organizationId, clientType);
+        if (organization != null) {
+            license.setOrganizationName(organization.getName());
+            license.setContactName(organization.getContactName());
+            license.setContactEmail(organization.getContactEmail());
+            license.setContactPhone(organization.getContactPhone());
         }
         return license.withComment(config.getProperty());
+    }
+
+    private Organization retrieveOrganizationInfo(String organizationId, String clientType) {
+        return switch (clientType) {
+            case "rest" -> organizationRestClient.getOrganization(organizationId);
+            default -> organizationRestClient.getOrganization(organizationId);
+        };
     }
 
     public License createLicense(License license){
