@@ -6,6 +6,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.concurrent.TimeoutException;
+
 /**
  * Created by Artyom Zheltyshev on 09.07.2023
  */
@@ -26,6 +29,11 @@ public class LicenseController {
     @PostMapping
     public ResponseEntity<License> createLicense(@RequestBody License license) {
         return ResponseEntity.ok(licenseService.createLicense(license));
+    }
+
+    @GetMapping
+    public List<License> getLicenses(@PathVariable String organizationId) throws TimeoutException {
+        return licenseService.getLicensesByOrganization(organizationId);
     }
 
     @PutMapping
