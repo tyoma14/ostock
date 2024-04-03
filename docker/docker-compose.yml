@@ -29,7 +29,7 @@ services:
         aliases:
           - "configserver"
   eurekaserver:
-    image: ostock/eurekaserver:0.0.1-SNAPSHOT
+    image: ostock/eureka-server:0.0.1-SNAPSHOT
     environment:
       CONFIGSERVER_URI: "http://configserver:8888"
     ports:
