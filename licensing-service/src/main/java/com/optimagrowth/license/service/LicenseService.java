@@ -5,7 +5,10 @@ import com.optimagrowth.license.model.License;
 import com.optimagrowth.license.model.Organization;
 import com.optimagrowth.license.repository.LicenseRepository;
 import com.optimagrowth.license.service.client.OrganizationRestTemplateClient;
+import io.github.resilience4j.bulkhead.annotation.Bulkhead;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -48,10 +51,17 @@ public class LicenseService {
         };
     }
 
-    @CircuitBreaker(name = "licenseService", fallbackMethod = "buildFallbackLicenseList")
+    @CircuitBreaker(name = "licenseService")
+    @RateLimiter(name = "licenseService")
+    @Retry(name = "retryLicenseService")
+    @Bulkhead(name = "bulkheadLicenseService")
     public List<License> getLicensesByOrganization(String organizationId) throws TimeoutException {
+        log.info("getLicensesByOrganization started");
+        log.info("Current thread: " + Thread.currentThread());
         randomlyRunLong();
-        return licenseRepository.findByOrganizationId(organizationId);
+        List<License> result = licenseRepository.findByOrganizationId(organizationId);
+        log.info("getLicensesByOrganization finished");
+        return result;
     }
 
     private void randomlyRunLong() throws TimeoutException {
@@ -71,6 +81,7 @@ public class LicenseService {
     }
 
     List<License> buildFallbackLicenseList(String organizationId, Throwable t) {
+        log.warn(t + " thrown, use fallback");
         ArrayList<License> fallbackList = new ArrayList<>();
         License license = new License();
         license.setLicenseId("0000000-00-00000");
