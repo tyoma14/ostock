@@ -1,5 +1,7 @@
 package com.optimagrowth.license.utils;
 
+import org.springframework.util.Assert;
+
 /**
  * Created by Artyom Zheltyshev on 01.03.2025
  */
@@ -20,6 +22,7 @@ public class UserContextHolder {
     }
 
     public static void setContext(UserContext context) {
+        Assert.notNull(context, "Only non-null UserContext instances are permitted");
         userContext.set(context);
     }
 
