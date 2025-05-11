@@ -34,3 +34,5 @@ TABLESPACE pg_default;
 
 ALTER TABLE public.licenses
     OWNER to postgres;
+
+CREATE DATABASE keycloak;

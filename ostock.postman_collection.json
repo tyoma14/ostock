@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "9b326b66-9f7f-4a89-b347-6b1bb8884128",
+		"name": "ostock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9397825"
+	},
+	"item": [
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "Organization via gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8072/organization-service/v1/organization/d898a142-de44-466c-8c88-9ceb2c2429d3",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"organization-service",
+								"v1",
+								"organization",
+								"d898a142-de44-466c-8c88-9ceb2c2429d3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Routes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8072/actuator/gateway/routes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"actuator",
+								"gateway",
+								"routes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8072/actuator/gateway/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"actuator",
+								"gateway",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "keycloak",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "ostock",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "1fe734bd-de06-4d41-ae51-ef6543873866.1a50b650-e37b-4d5f-9e64-fbfaebf8dc0e.31a23d8c-4606-4822-98c9-c826ad0be9b9",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fspmia-realm%2Faccount",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "3a23d03a-a58f-4b90-82c6-a0e606a9e01b",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/realms/spmia-realm/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"spmia-realm",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RPT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJfTW43V1ZOVGlNYzhOTkhFTDd5QjJhdkVnel9JTU1wOUR2a1RaM2dKbHM0In0.eyJleHAiOjE3NDY3MTEyMTQsImlhdCI6MTc0NjcxMDkxNCwianRpIjoiOTE3ZDc3MmUtY2M5Ni00ZTZkLWFjZTgtNWJhYzBlNzBiZWE2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zcG1pYS1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIyNDQyZTI2OS02ZDMxLTQ2YmEtOWYzYy1jOWZjMWEzMGZkYzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvc3RvY2siLCJzaWQiOiI2Zjg0NDc5Ny0wNWQ4LTQyNjItYTM0OS0xMDYxNmFjNmRhYzkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zcG1pYS1yZWFsbSIsInVtYV9hdXRob3JpemF0aW9uIiwib3N0b2NrLWFkbWluIiwib3N0b2NrLXVzZXIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJvc3RvY2siOnsicm9sZXMiOlsiQURNSU4iLCJVU0VSIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJBcnR5b20gWmhlbHR5c2hldiIsInByZWZlcnJlZF91c2VybmFtZSI6ImlsbGFyeS5odWF5bHVwbyIsImdpdmVuX25hbWUiOiJBcnR5b20iLCJmYW1pbHlfbmFtZSI6IlpoZWx0eXNoZXYiLCJlbWFpbCI6ImFydGVtLnpoZWx0eXNoZXYuOThAZ21haWwuY29tIn0.ORvVrZUCiGcCXA5wnhwePjm-zeynVB4q0JSoUg1zvPpxYFXFkGkCmcZ0G8dyliGe-0hXHWUvUKzSRo5KcN9DgCu3iWTeUCywtjckqBYtxFFeaUKm4oMszDokm42Yiv30iaWcTn2O64NwpyYrYepfbGQUN7ag9hOmyR7mB3_28aQqFDBMeKrydiC-H69KzF_DCaYPVC9riG-iioKx8Nts1KWwhwsIYKSyU8auEUruCfyNvO3yadmPNuMfGXNfV3oZO9u8l1mIdwjOcFXNifi3061cpkzmlPGDKHtMCVEesqsBa5Bmxg8G2R9-tQQg5d3i3frVxBg7rtKEiRvsCKzMgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "urn:ietf:params:oauth:grant-type:uma-ticket",
+									"type": "text"
+								},
+								{
+									"key": "audience",
+									"value": "ostock",
+									"type": "text"
+								},
+								{
+									"key": "permission",
+									"value": "organization#Delete",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/realms/spmia-realm/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"spmia-realm",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Certs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/realms/spmia-realm/protocol/openid-connect/certs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"spmia-realm",
+								"protocol",
+								"openid-connect",
+								"certs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authorization",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "illary.huaylupo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/realms/spmia-realm/protocol/openid-connect/auth?response_type=code&client_id=ostock&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fspmia-realm%2Faccount&scope=openid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"spmia-realm",
+								"protocol",
+								"openid-connect",
+								"auth"
+							],
+							"query": [
+								{
+									"key": "response_type",
+									"value": "code"
+								},
+								{
+									"key": "client_id",
+									"value": "ostock"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fspmia-realm%2Faccount"
+								},
+								{
+									"key": "scope",
+									"value": "openid"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/realms/spmia-realm/login-actions/authenticate?username=illary.huaylupo&password=password1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"spmia-realm",
+								"login-actions",
+								"authenticate"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "illary.huaylupo"
+								},
+								{
+									"key": "password",
+									"value": "password1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get license",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/organization/d898a142-de44-466c-8c88-9ceb2c2429d3/license/41723bd2-ff0a-4b82-9b00-329f24ac9732",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"organization",
+						"d898a142-de44-466c-8c88-9ceb2c2429d3",
+						"license",
+						"41723bd2-ff0a-4b82-9b00-329f24ac9732"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create license",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Test Product\",\n    \"organizationId\": \"d898a142-de44-466c-8c88-9ceb2c2429d3\",\n    \"productName\": \"Ostock\",\n    \"licenseType\": \"partial\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/organization/d898a142-de44-466c-8c88-9ceb2c2429d3/license",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"organization",
+						"d898a142-de44-466c-8c88-9ceb2c2429d3",
+						"license"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get organization",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJfTW43V1ZOVGlNYzhOTkhFTDd5QjJhdkVnel9JTU1wOUR2a1RaM2dKbHM0In0.eyJleHAiOjE3NDUxNDg2NTQsImlhdCI6MTc0NTE0ODM1NCwianRpIjoiYWExMDg2YmMtZjU5Zi00ODVjLThkZDEtNGY1ZWE2Nzg0ZDEzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zcG1pYS1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIyNDQyZTI2OS02ZDMxLTQ2YmEtOWYzYy1jOWZjMWEzMGZkYzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvc3RvY2siLCJzaWQiOiI3NDFkNDQ5My04NDA4LTQxZjItODA5NS04NTY5ZDg5M2VhNzkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zcG1pYS1yZWFsbSIsInVtYV9hdXRob3JpemF0aW9uIiwib3N0b2NrLWFkbWluIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib3N0b2NrIjp7InJvbGVzIjpbIkFETUlOIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJBcnR5b20gWmhlbHR5c2hldiIsInByZWZlcnJlZF91c2VybmFtZSI6ImlsbGFyeS5odWF5bHVwbyIsImdpdmVuX25hbWUiOiJBcnR5b20iLCJmYW1pbHlfbmFtZSI6IlpoZWx0eXNoZXYiLCJlbWFpbCI6ImFydGVtLnpoZWx0eXNoZXYuOThAZ21haWwuY29tIn0.Ai0GvobvDh4On4zi3_acMU-zRTCV7eKWjWnGRp8h1Y7u_uzD_b-mBNsT-arzwciRlLGkmiyQ26PnPpoaJJmfiPjbAsm5gNgMU3g6Qk5dwUnu0zOSSRglY9pfkqNHWCjuBF_4_LOugo1wMfuINGwjwROo36zFhduQcWtUc_-krYshMUwmk0x5HDaN-BiHZbYYjNXhHxH2DUQU6htRYEMJPi1t0c5sUwDhjSGaMRIoF3xh-PuwVNQ2EzTv9DPIFpaYbbwZpkzLlc1sbrgkwBFpsf2UhazFqMqdEktfGvoE_bLeqGPdZm6ipI-q5-68T7gSiL_pITFSpVrWSgiEVwWbSA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/v1/organization/d898a142-de44-466c-8c88-9ceb2c2429d3",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"organization",
+						"d898a142-de44-466c-8c88-9ceb2c2429d3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get licenses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/organization/d898a142-de44-466c-8c88-9ceb2c2429d3/license",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"organization",
+						"d898a142-de44-466c-8c88-9ceb2c2429d3",
+						"license"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Circuitbreakers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/circuitbreakers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"circuitbreakers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete organization",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

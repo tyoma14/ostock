@@ -4,28 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="Глава 7. Шаблоны устойчивости + тесты на jmeter">
-      <change afterPath="$PROJECT_DIR$/gatewayserver/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/optimagrowth/gateway/ApiGatewayServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/optimagrowth/gateway/filters/FilterUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/optimagrowth/gateway/filters/ResponseFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/optimagrowth/gateway/filters/TrackingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/test/java/com/optimagrowth/gateway/ApiGatewayServerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/utils/UserContextInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="Глава 8. Маршрутизация служб с использованием Spring Cloud Gateway">
+      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/organization-service/src/main/resources/policy-enforcer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ostock.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/LicensingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/LicensingServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/utils/UserContextHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/utils/UserContextHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/organization-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +47,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -71,41 +61,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.gatewayserver [clean,package...].executor": "Run",
-    "Maven.licensing-service [clean,package...].executor": "Run",
-    "Maven.ostock-parent-pom [clean,package...].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "liberica-17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Artyom/Projects/ostock/API Gateway server",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "dfef9b40cf91d897bcf5f801397e5550",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker.keycloak: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gatewayserver [clean,package...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.licensing-service [clean,package...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.organization-service [clean,package...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ostock-parent-pom [clean,package...].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;liberica-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Artyom/Projects/ostock/organization-service/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;dfef9b40cf91d897bcf5f801397e5550&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Artyom\Projects\ostock\organization-service\src\main\resources" />
       <recent name="C:\Users\Artyom\Projects\ostock\API Gateway server" />
       <recent name="C:\Users\Artyom\Projects\ostock\API Gateway server\src\main\resources" />
       <recent name="$PROJECT_DIR$/organization-service" />
       <recent name="$PROJECT_DIR$/organization-service/src/main/java/org/optimagrowth/organization" />
-      <recent name="$PROJECT_DIR$/eurekaserver" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.optimagrowth.license.model" />
@@ -125,7 +117,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
+  <component name="RunManager" selected="Docker.docker.keycloak: Compose Deployment">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ostock" />
       <method v="2">
@@ -181,6 +173,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker.keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="keycloak" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker.keycloak: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -222,7 +238,20 @@
       <workItem from="1741969110053" duration="8851000" />
       <workItem from="1742018847959" duration="7577000" />
       <workItem from="1742223490010" duration="714000" />
-      <workItem from="1742226344900" duration="4239000" />
+      <workItem from="1742226344900" duration="4933000" />
+      <workItem from="1743847632648" duration="1906000" />
+      <workItem from="1743852449775" duration="7129000" />
+      <workItem from="1743922451384" duration="10497000" />
+      <workItem from="1744047572511" duration="5041000" />
+      <workItem from="1744217492574" duration="5439000" />
+      <workItem from="1744530974890" duration="2711000" />
+      <workItem from="1745040325549" duration="24522000" />
+      <workItem from="1745650242362" duration="1420000" />
+      <workItem from="1745945072441" duration="1263000" />
+      <workItem from="1746081053876" duration="1668000" />
+      <workItem from="1746357319875" duration="7248000" />
+      <workItem from="1746464420580" duration="6884000" />
+      <workItem from="1746686991021" duration="8065000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files added">
       <created>1689883955206</created>
@@ -260,19 +289,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740811379796</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Глава 8. Маршрутизация служб с использованием Spring Cloud Gateway">
+      <option name="closed" value="true" />
+      <created>1742230633525</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742230633525</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/organization-service" />
+    </ignored-roots>
     <MESSAGE value=".gitignore files added" />
     <MESSAGE value="- Licensing Service &#10;- Config Server&#10;- Docker configs" />
     <MESSAGE value="- Organization Service added&#10;- Eureka Server added" />
     <MESSAGE value="Organization Service usage through Eureka Server" />
     <MESSAGE value="Шаблоны устойчивости:&#10;- Подключен Resilience4j&#10;- Добавлен вызов удалённой службы с имитацией отказа&#10;- Добавлен размыкатель цепи с резервной реализацией" />
     <MESSAGE value="Глава 7. Шаблоны устойчивости + тесты на jmeter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Глава 7. Шаблоны устойчивости + тесты на jmeter" />
+    <MESSAGE value="Глава 8. Маршрутизация служб с использованием Spring Cloud Gateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="Глава 8. Маршрутизация служб с использованием Spring Cloud Gateway" />
   </component>
 </project>

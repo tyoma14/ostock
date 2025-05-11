@@ -1,0 +1,25 @@
+{
+  "realm": "spmia-realm",
+  "auth-server-url": "http://keycloak:8080",
+  "resource": "ostock",
+  "enforcement-mode" : "ENFORCING",
+  "paths": [
+    {
+      "name": "organization",
+      "path": "/v1/organization/*",
+      "methods": [
+        {
+          "method": "GET",
+          "scopes": ["Read"]
+        },
+        {
+          "method": "DELETE",
+          "scopes": ["Delete"]
+        }
+      ]
+    }
+  ],
+  "credentials": {
+    "secret": "1LaMAOudE3wpj8DiZVzk41SrdsJLZcZU"
+  }
+}
