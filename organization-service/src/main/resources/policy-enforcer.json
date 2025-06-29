@@ -15,6 +15,10 @@
         {
           "method": "DELETE",
           "scopes": ["Delete"]
+        },
+        {
+          "method": "POST",
+          "scopes": ["Create"]
         }
       ]
     }

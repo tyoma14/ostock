@@ -4,15 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="Глава 8. Маршрутизация служб с использованием Spring Cloud Gateway">
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/resources/policy-enforcer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ostock.postman_collection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="Глава 9. Безопасность микросервисов">
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/config/OrganizationRedisRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/events/model/OrganizationChangeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/events/model/OrganizationChangeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/events/source/ActionEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/events/source/SimpleSourceBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/utils/UserContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/LicensingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/LicensingServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/config/ServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/model/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/model/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/service/client/OrganizationRestTemplateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/service/client/OrganizationRestTemplateClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/utils/UserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/utils/UserContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/organization-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/organization-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/model/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/model/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/service/OrganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/service/OrganizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization-service/src/main/resources/policy-enforcer.json" beforeDir="false" afterPath="$PROJECT_DIR$/organization-service/src/main/resources/policy-enforcer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +45,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -61,50 +74,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker.keycloak: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gatewayserver [clean,package...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.licensing-service [clean,package...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.organization-service [clean,package...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ostock-parent-pom [clean,package...].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;liberica-17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Artyom/Projects/ostock/organization-service/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;dfef9b40cf91d897bcf5f801397e5550&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker.keycloak: Compose Deployment.executor": "Run",
+    "Maven.gatewayserver [clean,package...].executor": "Run",
+    "Maven.licensing-service [clean,package...].executor": "Run",
+    "Maven.organization-service [clean,package...].executor": "Run",
+    "Maven.ostock-parent-pom [--help].executor": "Run",
+    "Maven.ostock-parent-pom [clean,package...].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "liberica-17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Artyom/Projects/manning-smia/chapter10",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "dfef9b40cf91d897bcf5f801397e5550",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Artyom\Projects\ostock\organization-service\src\main\java\com\optimagrowth\organization\controller" />
       <recent name="C:\Users\Artyom\Projects\ostock\organization-service\src\main\resources" />
       <recent name="C:\Users\Artyom\Projects\ostock\API Gateway server" />
       <recent name="C:\Users\Artyom\Projects\ostock\API Gateway server\src\main\resources" />
       <recent name="$PROJECT_DIR$/organization-service" />
-      <recent name="$PROJECT_DIR$/organization-service/src/main/java/org/optimagrowth/organization" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.optimagrowth.license.events.model" />
+      <recent name="com.optimagrowth.organization.utils" />
       <recent name="com.optimagrowth.license.model" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn --help" />
+      <command value="mvn clean package dockerfile:build --debug " />
       <command value="mvn clean package dockerfile:build" />
     </option>
   </component>
@@ -251,7 +269,19 @@
       <workItem from="1746081053876" duration="1668000" />
       <workItem from="1746357319875" duration="7248000" />
       <workItem from="1746464420580" duration="6884000" />
-      <workItem from="1746686991021" duration="8065000" />
+      <workItem from="1746686991021" duration="8891000" />
+      <workItem from="1747145222383" duration="2612000" />
+      <workItem from="1749481811819" duration="1623000" />
+      <workItem from="1749532951980" duration="3024000" />
+      <workItem from="1749714411945" duration="6446000" />
+      <workItem from="1749793678615" duration="12950000" />
+      <workItem from="1750167943149" duration="1619000" />
+      <workItem from="1750483198625" duration="6468000" />
+      <workItem from="1750575636869" duration="5488000" />
+      <workItem from="1750693619953" duration="5498000" />
+      <workItem from="1750951622428" duration="7811000" />
+      <workItem from="1750996808772" duration="2000" />
+      <workItem from="1751093195173" duration="18475000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files added">
       <created>1689883955206</created>
@@ -297,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742230633525</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Глава 9. Безопасность микросервисов">
+      <option name="closed" value="true" />
+      <created>1746947426517</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746947426517</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +352,7 @@
     <MESSAGE value="Шаблоны устойчивости:&#10;- Подключен Resilience4j&#10;- Добавлен вызов удалённой службы с имитацией отказа&#10;- Добавлен размыкатель цепи с резервной реализацией" />
     <MESSAGE value="Глава 7. Шаблоны устойчивости + тесты на jmeter" />
     <MESSAGE value="Глава 8. Маршрутизация служб с использованием Spring Cloud Gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Глава 8. Маршрутизация служб с использованием Spring Cloud Gateway" />
+    <MESSAGE value="Глава 9. Безопасность микросервисов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Глава 9. Безопасность микросервисов" />
   </component>
 </project>
