@@ -77,6 +77,10 @@ services:
         condition: service_healthy
       configserver:
         condition: service_started
+      zipkin:
+        condition: service_started
+      logstash:
+        condition: service_started
     ports:
       - "8180:8080"
     networks:
@@ -92,6 +96,10 @@ services:
       database:
         condition: service_healthy
       configserver:
+        condition: service_started
+      zipkin:
+        condition: service_started
+      logstash:
         condition: service_started
     ports:
       - "8081:8081"
@@ -146,6 +154,56 @@ services:
       backend:
         aliases:
           - "redis"
+  logstash:
+    image: logstash:9.1.2
+    ports:
+      - "5000:5000"
+    command: logstash -f /etc/logstash/conf.d/logstash.conf
+    volumes:
+      - ./config:/etc/logstash/conf.d
+    networks:
+      backend:
+        aliases:
+          - "logstash"
+    depends_on:
+      - elasticsearch
+  elasticsearch:
+    image: elasticsearch:9.1.2
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+    ports:
+      - "9300:9300"
+      - "9200:9200"
+    networks:
+      backend:
+        aliases:
+          - "elasticsearch"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    mem_limit: 1GB
+  kibana:
+    image: kibana:9.1.2
+    ports:
+      - "5601:5601"
+    networks:
+      backend:
+        aliases:
+          - "kibana"
+    depends_on:
+      - elasticsearch
+    environment:
+      ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      backend:
+        aliases:
+          - "zipkin"
 networks:
   backend:
     driver: bridge
+volumes:
+  esdata1:

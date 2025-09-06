@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="Глава 9. Безопасность микросервисов">
-      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/config/OrganizationRedisRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/events/model/OrganizationChangeModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/events/model/OrganizationChangeModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/events/source/ActionEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/events/source/SimpleSourceBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/utils/UserContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4c353758-9ec9-430e-880c-be168c6aa21d" name="Changes" comment="Глава 10. Событийно-ориентированная архитектура и Spring Cloud Stream">
+      <change afterPath="$PROJECT_DIR$/docker/config/logstash.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/licensing-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/organization-service/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/licensing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/LicensingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/LicensingServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/config/ServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/model/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/model/Organization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/service/client/OrganizationRestTemplateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/service/client/OrganizationRestTemplateClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/utils/UserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/licensing-service/src/main/java/com/optimagrowth/license/utils/UserContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/organization-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/organization-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/model/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/model/Organization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/service/OrganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/organization-service/src/main/java/com/optimagrowth/organization/service/OrganizationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organization-service/src/main/resources/policy-enforcer.json" beforeDir="false" afterPath="$PROJECT_DIR$/organization-service/src/main/resources/policy-enforcer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +80,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "liberica-17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Artyom/Projects/manning-smia/chapter10",
+    "last_opened_file_path": "C:/Users/Artyom/Projects/ostock/gatewayserver/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -107,11 +97,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Artyom\Projects\ostock\gatewayserver\src\main\resources" />
+      <recent name="C:\Users\Artyom\Projects\ostock\licensing-service\src\main\resources" />
       <recent name="C:\Users\Artyom\Projects\ostock\organization-service\src\main\java\com\optimagrowth\organization\controller" />
       <recent name="C:\Users\Artyom\Projects\ostock\organization-service\src\main\resources" />
       <recent name="C:\Users\Artyom\Projects\ostock\API Gateway server" />
-      <recent name="C:\Users\Artyom\Projects\ostock\API Gateway server\src\main\resources" />
-      <recent name="$PROJECT_DIR$/organization-service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.optimagrowth.license.events.model" />
@@ -281,7 +271,19 @@
       <workItem from="1750693619953" duration="5498000" />
       <workItem from="1750951622428" duration="7811000" />
       <workItem from="1750996808772" duration="2000" />
-      <workItem from="1751093195173" duration="18475000" />
+      <workItem from="1751093195173" duration="19276000" />
+      <workItem from="1753862611244" duration="722000" />
+      <workItem from="1755365767072" duration="8644000" />
+      <workItem from="1755705944576" duration="3027000" />
+      <workItem from="1755877182308" duration="10844000" />
+      <workItem from="1755942520326" duration="9196000" />
+      <workItem from="1756179610577" duration="4411000" />
+      <workItem from="1756558082488" duration="1003000" />
+      <workItem from="1756649368931" duration="7204000" />
+      <workItem from="1756744374266" duration="5382000" />
+      <workItem from="1756914311454" duration="5359000" />
+      <workItem from="1757141897165" duration="1191000" />
+      <workItem from="1757143421538" duration="6113000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files added">
       <created>1689883955206</created>
@@ -335,11 +337,30 @@
       <option name="project" value="LOCAL" />
       <updated>1746947426517</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Глава 10. Событийно-ориентированная архитектура и Spring Cloud Stream">
+      <option name="closed" value="true" />
+      <created>1751208468096</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751208468096</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Глава 10. Событийно-ориентированная архитектура и Spring Cloud Stream">
+      <option name="closed" value="true" />
+      <created>1751208554215</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751208554215</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -353,6 +374,7 @@
     <MESSAGE value="Глава 7. Шаблоны устойчивости + тесты на jmeter" />
     <MESSAGE value="Глава 8. Маршрутизация служб с использованием Spring Cloud Gateway" />
     <MESSAGE value="Глава 9. Безопасность микросервисов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Глава 9. Безопасность микросервисов" />
+    <MESSAGE value="Глава 10. Событийно-ориентированная архитектура и Spring Cloud Stream" />
+    <option name="LAST_COMMIT_MESSAGE" value="Глава 10. Событийно-ориентированная архитектура и Spring Cloud Stream" />
   </component>
 </project>
